@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task7</title>
+ 
+    <script>
+         window.onload = function drawfigures() {
+             drawingCanvas = document.getElementById('figure');
+             if(drawingCanvas && drawingCanvas.getContext('2d')) {
+                var context = drawingCanvas.getContext('2d');
+                //окружность
+                context.strokeStyle = "#00FFFF";
+                context.fillStyle = "#00FFFF";
+                context.beginPath();
+                context.arc(70,70,50,0,Math.PI*2,true);
+                context.closePath();
+                context.stroke();
+                context.fill();
+                //2 окружность
+                context.strokeStyle = "#800080";
+                context.fillStyle = "#800080";
+                context.beginPath();
+                context.arc(70,70,30,0,Math.PI*2,true);
+                context.closePath();
+                context.stroke();
+                context.fill();
+                //треугольник
+                context.strokeStyle = "#00FF00";
+                context.fillStyle = "#00FF00";
+                context.beginPath();
+                context.moveTo(150, 0);
+                context.lineTo(300, 0);
+                context.lineTo(225, 100);
+                context.fill();
+                //2 треугольник
+                context.strokeStyle = "#808080";
+                context.fillStyle = "#808080";
+                context.beginPath();
+                context.moveTo(200, 50);
+                context.lineTo(250, 50);
+                context.lineTo(225, 5);
+                context.fill();
+                //прямоугольник
+                context.fillStyle = "#EE82EE";
+                context.beginPath();
+                context.fillRect(350, 0, 200, 100);
+                //2 прямоугольник
+                context.fillStyle = "#808000";
+                context.beginPath();
+                context.fillRect(400, 10, 100, 70);
+             }
+         }
+    </script>
+</head>
+<body>
+    <p>Косогоров Кирилл Станиславович</p><br>
+    <canvas id="figure" width="1000" height="1000">
+        <p>Ваш браузер не поддерживает рисование</p>
+    </canvas>
+</body>
+</html>
